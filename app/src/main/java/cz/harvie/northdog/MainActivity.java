@@ -46,6 +46,7 @@ public class MainActivity extends Activity {
         mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
         mView = new SampleView(this);
+        mView.setKeepScreenOn(true); //no sleep
         setContentView(mView);
     }
     
