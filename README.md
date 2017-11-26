@@ -6,3 +6,12 @@
  * Based on https://github.com/jarofgreen/Just-A-Damn-Compass
  * You need to generate binaural audio mp3 files using hrtf.py found at https://github.com/uncopenweb/3DSound
  * Put these files in /sdcard/kompas/dog3/a*.mp3
+
+## TODO
+
+ * Get published at F-Droid.org
+ * Work in background, idealy with android sleeping or display turned off
+ * Add possibility to set delay between sounds, so it does not drive you nuts if used for longer time period
+ * Add possibility to measure distance (beep each 100 meters or kilometer?)
+ * Make it possible to work without phone being flat to ground. Eg.: having phone in front pocket of the shirt would be useful for handsfree opration.
+ * Generate 3D sound directly without need of manual preprocessing
