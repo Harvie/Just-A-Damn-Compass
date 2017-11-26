@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.1"
 
     defaultConfig {
-        applicationId "cz.harvie.northdog.cz.harvie.cz.harvie.northdog"
+        applicationId "cz.harvie.northdog"
         minSdkVersion 7
         targetSdkVersion 7
     }
