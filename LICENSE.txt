@@ -1,9 +1,11 @@
 This is based heavily on the sample app found at 
 http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/Compass.html
 which was then edited by James Baster. james -at- jarofgreen -dot- co -dot- uk
+and then edited by Tomas Mudrunka.
 
 Copyright (C) 2007 The Android Open Source Project
 Copyright (C) 2011 James Baster
+Copyright (C) 2011 Tomas Mudrunka
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

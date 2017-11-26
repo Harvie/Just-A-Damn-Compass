@@ -1,6 +1,5 @@
-package uk.co.jarofgreen.JustADamnCompass;
+package cz.harvie.northdog;
 
-import uk.co.jarofgreen.JustADamnCompass.AboutActivity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Context;
@@ -14,6 +13,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.media.MediaPlayer;
+
+import java.io.File;
+import java.io.IOException;
+
+import cz.harvie.northdog.R;
 
 public class MainActivity extends Activity {
 
@@ -22,6 +27,7 @@ public class MainActivity extends Activity {
 	private float[] mValues;            
 
 	private SampleView mView;
+    private final MediaPlayer mp = new MediaPlayer();
 
 	private final SensorEventListener mListener = new SensorEventListener() {
         public void onSensorChanged(SensorEvent event) {
@@ -37,7 +43,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);        
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
         mView = new SampleView(this);
         setContentView(mView);
     }
@@ -77,6 +83,29 @@ public class MainActivity extends Activity {
             }
             
             canvas.drawBitmap(compassImage, -150, -150, null);
+
+            if (mValues != null) {
+                Paint paint = new Paint();
+                paint.setColor(Color.WHITE);
+                paint.setTextSize(40);
+                int az = Math.round(-mValues[0]/5)*5;
+                az = ((az+180+360)%360)-180;
+                canvas.drawText(Integer.toString(az), -40, 40, paint);
+                //canvas.drawText(String.format("%.0g%n", -mValues[0]), -50, 40, paint);
+
+                File path = android.os.Environment.getExternalStorageDirectory();
+                try {
+                    if(!mp.isPlaying()) {
+                        mp.reset();
+                        mp.setDataSource(path + "/kompas/dog3/a"+az+".mp3");
+                        mp.prepare();
+                        //mp.setLooping(true);
+                        mp.start();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
 

@@ -1,10 +1,12 @@
-package uk.co.jarofgreen.JustADamnCompass;
+package cz.harvie.northdog;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.text.util.Linkify;
 import android.widget.TextView;
+
+import cz.harvie.northdog.R;
 
 public class AboutActivity extends Activity {
 

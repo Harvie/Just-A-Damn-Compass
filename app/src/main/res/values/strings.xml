@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Just A Damn Compass</string>
+	<string name="app_name">NorthDog Audio Compass</string>
 	<string name="about_menu">About</string>
 	<string name="about_text">
-		This app is just a compass.
-		\n	    
-		\nMore information and the source code is at https://github.com/jarofgreen/Just-A-Damn-Compass
+		This app is audio compass using 3D sound
 		\n
-		\nPlease report problems at https://github.com/jarofgreen/Just-A-Damn-Compass/issues
+		\nSource code available at:
+		\nhttps://github.com/harvie
+		\n
+		\nBased on James Baster\'s "Just A Damn Compass"
+		\nhttps://github.com/jarofgreen/Just-A-Damn-Compass
 		\n
 		\nCopyright &#169; 2007 The Android Open Source Project
 		\nCopyright &#169; 2011 James Baster
+		\nCopyright &#169; 2017 Tomas Mudrunka
 		\n
 		\nLicensed under the Apache License, Version 2.0 (the "License");
 		you may not use this file except in compliance with the License.
