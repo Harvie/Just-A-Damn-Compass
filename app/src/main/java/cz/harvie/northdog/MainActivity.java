@@ -1,6 +1,7 @@
 package cz.harvie.northdog;
 
 import android.app.Activity;
+import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
 import android.content.Context;
 import android.content.Intent;
@@ -91,13 +92,13 @@ public class MainActivity extends Activity {
                 int az = Math.round(-mValues[0]/5)*5;
                 az = ((az+180+360)%360)-180;
                 canvas.drawText(Integer.toString(az), -40, 40, paint);
-                //canvas.drawText(String.format("%.0g%n", -mValues[0]), -50, 40, paint);
 
-                File path = android.os.Environment.getExternalStorageDirectory();
                 try {
                     if(!mp.isPlaying()) {
                         mp.reset();
-                        mp.setDataSource(path + "/kompas/dog3/a"+az+".mp3");
+                        //mp.setDataSource(android.os.Environment.getExternalStorageDirectory() + "/kompas/dog3/a"+az+".mp3");
+                        AssetFileDescriptor afd = getAssets().openFd("a"+az+".mp3");
+                        mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
                         mp.prepare();
                         //mp.setLooping(true);
                         mp.start();
