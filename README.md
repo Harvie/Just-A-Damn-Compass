@@ -7,9 +7,12 @@
  * Based on https://github.com/jarofgreen/Just-A-Damn-Compass
  * Binaural audio mp3 files were generated using hrtf.py found at https://github.com/uncopenweb/3DSound
 
+[<img src="https://f-droid.org/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/cz.harvie.northdog/)
+
 ## TODO
 
- * Get published at F-Droid.org
  * Work in background, idealy with android sleeping or display turned off
  * Add possibility to set delay between sounds, so it does not drive you nuts if used for longer time period
  * Add possibility to measure distance (beep each 100 meters or kilometer?)
