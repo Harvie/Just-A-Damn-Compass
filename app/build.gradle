@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "27.0.1"
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "cz.harvie.northdog"
         minSdkVersion 7
-        targetSdkVersion 7
+        targetSdkVersion 28
     }
 
     buildTypes {
